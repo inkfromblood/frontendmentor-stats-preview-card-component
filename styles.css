@@ -1,0 +1,42 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(233, 47%, 7%);
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 1080px;
+  background-color: hsl(244, 38%, 16%);
+}
+
+.copy {
+  padding: 4rem;
+}
+
+.img-desktop {
+  filter: brightness(0.4) sepia(1) saturate(1000%) hue-rotate(260deg) opacity(0.80);
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
