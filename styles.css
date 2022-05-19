@@ -1,42 +1,122 @@
-body {
-  font-family: 'Inter', sans-serif;
-  font-family: 'Lexend Deca', sans-serif;
-  color: hsla(0, 0%, 100%, 0.75);
-  background-color: hsl(233, 47%, 7%);
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+span {
+  color:  hsl(277, 64%, 61%);
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: hsl(244, 38%, 16%);
+  border-radius: .5rem;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.image-component img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-component {
+  position: relative;
+}
+
+.image-component::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsl(277, 64%, 61%, .6);
+}
+
+.info {
+  color: white;
+  padding: 13%;
+}
+
+.main-paragraph {
+  font-size: 15px;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stats {
   display: flex;
-  flex-direction: row;
-  width: 1080px;
-  background-color: hsl(244, 38%, 16%);
+  justify-content: space-between;
+  padding-top: 4rem;
+
+}
+.overview h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: .5rem;
 }
 
-.copy {
-  padding: 4rem;
+.overview p {
+  font-family: 'Lexend Deca';
+  font-size: 12px;
+  font-weight: 200;
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
-.img-desktop {
-  filter: brightness(0.4) sepia(1) saturate(1000%) hue-rotate(260deg) opacity(0.80);
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+
+h1 {
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
 }
 
+  .card {
+    grid-template-columns: 1fr;
+  }
 
+  .image-component {
+    order: -1;
+  }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
+  .info {
+    padding: 8%;
+  }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  .stats {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .overview p {
+    padding-bottom: 2rem;
+  }
 }

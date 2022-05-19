@@ -4,44 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@200;400&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Stats preview card component</title>
-</head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor Challenge - Stat card using pure css and html</title>
 
 <body>
-  <main>
-    <div class="container">
-      <div class="card">
-        <div class="copy">
-          Get insights that help your business grow.
 
+  <div class="container">
+    <div class="card">
+      <div class="info">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p class="main-paragraph">
           Discover the benefits of data analytics and make better decisions regarding revenue, customer
           experience, and overall efficiency.
-
-          10k+ companies
-          314 templates
-          12m+ queries
+        </p>
+        <div class="stats">
+          <div class="overview">
+            <h2>10k+</h2>
+            <p>COMPANIES</p>
+          </div>
+          <div class="overview">
+            <h2>314</h2>
+            <p>TEMPLATES</p>
+          </div>
+          <div class="overview">
+            <h2>12M+</h2>
+            <p>QUERIES</p>
+          </div>
         </div>
-        <div class="hero">
-          <img class="img-desktop" src="images/image-header-desktop.jpg" alt="image-header-desktop">
-        </div>
-
+      </div>
+      <div class="image-component">
+        <img src="images/image-header-desktop.jpg" alt="image">
       </div>
     </div>
+  </div>
 
-  </main>
 
-
-  <footer class="attribution">
+  <!-- /* <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Dan Bennett</a>.
-  </footer>
+  </footer> -->
 
 </body>
 
